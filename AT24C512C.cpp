@@ -23,7 +23,7 @@ uint8_t AT24C512C::read(unsigned long dataAddress)
    Wire.write((uint8_t)((dataAddress & WORD_MASK) >> 8)); // MSB
    Wire.write((uint8_t)(dataAddress & 0xFF)); // LSB
    Wire.endTransmission();
-   Wire.requestFrom(0x50,1);
+   Wire.requestFrom(0x50 | (dataAddress >> 16), 1);
    if (Wire.available()) data = Wire.read();
    return data;
 }
