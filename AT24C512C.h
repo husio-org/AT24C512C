@@ -53,13 +53,13 @@
   Address = A2..A0 P8..P0 B6..B0
 
   2^3 devices = 8 devices (A bits)
-  2^9 pages = 512 pages (B pits)
+  2^9 pages = 512 pages (P Bits)
   2^7 bytes = 128 bytes (B bits)
 
   2^16 bytes per device = 64 Kbytes per device
   2^19 bytes with all 8 devices = 512Kbytes max storage capability
 
-  
+
 */
 
 #include <Arduino.h>
